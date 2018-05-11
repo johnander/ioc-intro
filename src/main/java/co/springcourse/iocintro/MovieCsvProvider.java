@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -43,11 +44,11 @@ public final class MovieCsvProvider implements MovieProvider {
 
   @Override
   public List<Movie> getMovies() {
-    return movies;
+    return Collections.unmodifiableList(movies);
   }
 
   @Override
-  public List<Movie> filter(final Predicate<Movie> predicate) {
+  public List<Movie> filter(Predicate<Movie> predicate) {
     return movies.stream().filter(predicate).collect(Collectors.toList());
   }
 }

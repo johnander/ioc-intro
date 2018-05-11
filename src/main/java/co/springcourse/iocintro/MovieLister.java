@@ -2,17 +2,19 @@ package co.springcourse.iocintro;
 
 import java.util.List;
 
-public class MovieLister {
+public final class MovieLister {
+
+  private MovieProvider movieProvider;
 
   public MovieLister(final MovieProvider movieProvider) {
-    throw new UnsupportedOperationException();
+    this.movieProvider = movieProvider;
   }
 
   public List<Movie> findAll() {
-    throw new UnsupportedOperationException();
+    return movieProvider.getMovies();
   }
 
   public List<Movie> findByDirector(final String director) {
-    throw new UnsupportedOperationException();
+    return movieProvider.filter(movie -> movie.getDirector().equalsIgnoreCase(director));
   }
 }

@@ -33,7 +33,7 @@ public final class IoC {
   public static MovieProvider movieProviderFactory(MovieProvidersId providerId) {
     switch (providerId) {
       case MEMORY:
-        throw new UnsupportedOperationException("Implement Memory Provider");
+        return new MovieMemoryProvider();
       case CSV:
         // IoC: Configuration
         return new MovieCsvProvider("ALL-MOVIES.csv", ';');

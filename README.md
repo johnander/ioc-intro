@@ -1,6 +1,6 @@
 # Introducción a la inversión de control e inyección de dependencias (IoC / DI)
 
-**Projecto base**, para completar por los estudiantes. Para la versión completa consultar el branch `completed`.
+**Projecto completo**.
 
 ## Gradle tasks
 
