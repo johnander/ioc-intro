@@ -1,6 +1,6 @@
 # Introducción a la inversión de control e inyección de dependencias (IoC / DI)
 
-**Projecto completo**.
+**Proyecto completo**.
 
 ## Gradle tasks
 
